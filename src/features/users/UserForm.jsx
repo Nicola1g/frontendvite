@@ -26,7 +26,7 @@ export default function UserForm({ initial, onSubmit, onCancel }) {
         }
     }, [initial])
 
-
+   // Unico handler per tutti gli input:
     const change = (e) => {
         const { name, value, type, checked } = e.target
         setForm(f => ({ ...f, [name]: type === 'checkbox' ? checked : value }))
@@ -40,7 +40,7 @@ export default function UserForm({ initial, onSubmit, onCancel }) {
         setErrors(e)
         return Object.keys(e).length === 0
     }
-
+//normalizza i dati per lapi
     const toPayload = () => ({
         username: form.username.trim(),
         ...(form.password ? { password: form.password } : {}),
@@ -76,7 +76,6 @@ export default function UserForm({ initial, onSubmit, onCancel }) {
                         name="password"
                         value={form.password}
                         onChange={change}
-                        className="pr-10"
                         {...(!initial ? { required: false } : {})}
                     />
                     <button
@@ -85,7 +84,7 @@ export default function UserForm({ initial, onSubmit, onCancel }) {
                         aria-label={showPwd ? 'Nascondi password' : 'Mostra password'}
                         className="absolute inset-y-0 right-2 my-auto text-slate-400 hover:text-slate-200"
                     >
-                        {showPwd ? '🙈' : '👁️'}
+                        {showPwd ? 'mostra' : 'non mostrare'}
                     </button>
                 </div>
             </label>

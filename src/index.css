@@ -2,17 +2,13 @@
 /* Plugin ufficiale Tailwind Forms (v4) */
 @plugin "@tailwindcss/forms";
 
-/* =======================
-   Variabili
-   ======================= */
+/*Variabili*/
 :root {
     /* Spinge più in basso il fondo pagina se serve */
     --page-extra: 340px;
 }
 
-/* =======================
-   BASE (dark theme + elementi HTML)
-   ======================= */
+/* BASE (dark theme + elementi HTML) */
 @layer base {
     :root { color-scheme: dark; }
     html  { @apply h-full; }
@@ -70,9 +66,7 @@
     }
 }
 
-/* =======================
-   COMPONENTS (classi riutilizzabili)
-   ======================= */
+
 @layer components {
     /* Contenitore globale uniforme */
     .app-shell { @apply mx-auto max-w-7xl px-4 md:px-8 py-6; }

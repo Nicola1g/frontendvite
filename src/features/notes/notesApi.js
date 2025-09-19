@@ -14,7 +14,7 @@ export const listNotes = async () => {
 
 // POST /notes  { title, text, user, completed? }
 export const createNote = async (payload) => {
-    const body = { completed: false, ...payload } // garantisci completed
+    const body = { completed: false, ...payload }
     const { data } = await api.post('/notes', body)
     return data
 }
@@ -23,7 +23,7 @@ export const createNote = async (payload) => {
 export const updateNote = async (id, payload) => {
     try {
         const body = { id, ...payload }
-        const { data } = await api.patch('/notes', body) // stile "id nel body"
+        const { data } = await api.patch('/notes', body)
         return data
     } catch (e) {
         // fallback per backend /notes/:id

@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
-import Alert from '../../components/Alert' // se non l'hai creato, togli questa riga e il componente sotto
-
+import Alert from '../../components/Alert'
 
 
 
@@ -24,7 +23,7 @@ export default function Login() {
         setError('')
         setSubmitting(true)
         try {
-            await login(form)            // ⬅️ chiama il backend /auth/login
+            await login(form)            // chiama il backend /auth/login
             navigate(from, { replace: true })
         } catch (err) {
             setError(err?.response?.data?.message || 'Credenziali non valide')
@@ -64,7 +63,6 @@ export default function Login() {
                                 onChange={change}
                                 autoComplete="current-password"
                                 required
-                                className="pr-10"
                             />
                             <button
                                 type="button"
@@ -72,7 +70,7 @@ export default function Login() {
                                 aria-label={showPwd ? 'Nascondi password' : 'Mostra password'}
                                 className="absolute inset-y-0 right-2 my-auto text-slate-400 hover:text-slate-200"
                             >
-                                {showPwd ? '🙈' : '👁️'}
+                                {showPwd ? 'mostra' : 'non mostrare'}
                             </button>
                         </div>
                     </label>

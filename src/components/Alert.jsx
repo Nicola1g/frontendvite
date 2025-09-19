@@ -7,3 +7,4 @@ export default function Alert({ type = 'error', children }) {
     }
     return <div className={map[type] || map.error}><div>{children}</div></div>
 }
+{/*childre e cio che va dentro alert ,che viene quindi mpstrato */}

@@ -5,6 +5,8 @@ export default function NoteForm({ initial, onSubmit, onCancel }) {
     const [form, setForm] = useState({ title: '', text: '', user: '', completed: false })
     const [users, setUsers] = useState([])
 
+
+    //carico gli utenti una sola volta (monto il form )
     useEffect(() => {
         (async () => {
             try {
@@ -15,9 +17,11 @@ export default function NoteForm({ initial, onSubmit, onCancel }) {
                 }
             } catch { setUsers([]) }
         })()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+
     }, [])
 
+
+//precompilo il form in modalita modifica, cioe metto cio che sta dentri
     useEffect(() => {
         if (initial) {
             setForm({

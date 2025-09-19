@@ -10,12 +10,12 @@ export default function Header() {
     return (
         <header className="mb-6">
             <div className="header-surface flex items-center justify-between">
-                {/* Sinistra: brand → sempre Home */}
+
                 <div className="h-left">
                     <Link to="/" className="brand-btn">TeamNotes</Link>
                 </div>
 
-                {/* Destra: menu dinamico */}
+                {/*a  Destra menu dinamic */}
                 <nav className="h-right">
                     {isAuthed ? (
                         <>
@@ -29,7 +29,7 @@ export default function Header() {
                         <>
                             <NavLink to="/" end className={linkCls}>Home</NavLink>
                             <NavLink to="/login" className={linkCls}>Login</NavLink>
-                            <NavLink to="/dash" className={linkCls}>Dashboard</NavLink>
+                            <NavLink to="/dash" className={linkCls}>Dashboard</NavLink>    {/*ovviamente requireauth ti riporta a login */}
                         </>
                     )}
                 </nav>

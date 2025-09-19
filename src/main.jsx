@@ -6,9 +6,9 @@ import './index.css'
 import { AuthProvider } from './context/AuthContext'
 
 createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <AuthProvider>
+    <React.StrictMode>    {/*Attiva controlli extra*/}
+        <BrowserRouter>          {/*Rende disponibili a tutta l’app routing (link, redirect, pagine protette)*/}
+            <AuthProvider>       {/*Fornisce stato di login e metodi (login, logout) a qualsiasi componente discendente*/}
                 <App />
             </AuthProvider>
         </BrowserRouter>

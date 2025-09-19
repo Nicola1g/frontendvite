@@ -6,13 +6,12 @@ export default function Footer() {
             <div className="app-shell">
                 <div className="footer-surface">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                        {/* Brand + meta */}
                         <div className="text-center md:text-left">
                             <div className="footer-brand">TeamNotes</div>
-                            <div className="footer-meta">© {year} · React + Vite · Tailwind</div>
+                            <div className="footer-meta">© {year} · React + Vite · </div>
                         </div>
 
-                        {/* Recapiti (chip) */}
+
                         <div className="flex flex-wrap items-center justify-center gap-2">
                             <a href="mailto:support@teamnotes.app" className="chip" aria-label="Email">
                                 📧 <span className="chip-muted">support@studenti.poliba.app</span>

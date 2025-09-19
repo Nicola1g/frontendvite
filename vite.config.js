@@ -17,3 +17,7 @@ export default defineConfig({
     }
   }
 })
+
+//  Axios '/api' che div api.get('/auth/me').
+// Il browser chiama http://localhost:5173/api/auth/me.
+// Vite vede che il path inizia con /api → lo proxa a http://localhost:5000/auth/me

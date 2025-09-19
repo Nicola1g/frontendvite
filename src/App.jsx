@@ -15,11 +15,11 @@ export default function App() {
     return (
         <Routes>
             <Route path="/" element={<Layout />}>
-                <Route index element={<Public />} />
+                <Route index element={<Public />} />{/*index prende esattamente lo /*/}
                 <Route path="login" element={<Login />} />
 
                 <Route element={<RequireAuth />}>
-                    <Route path="dash" element={<DashLayout />}>
+                    <Route path="dash" element={<DashLayout />}>{/*wrapper del contesto*/}
                         <Route index element={<Welcome />} />
                         <Route path="notes" element={<NotesList />}/>
                         <Route path="users" element={<UsersList />} />
